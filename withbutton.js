@@ -33,11 +33,11 @@ const myConfig =
 
 
 function createQRCode() {
-    var invoiceLength = json.invoice.length;
+    var invoiceLength = 26;
 
-    var qr = qrcode(json.invoice.length, "L");
+    var qr = qrcode(26, "L");
 
-    qr.addData(json.invoice);
+    qr.addData(localStorage.getItem('data'));
     qr.make();
 
     qrCode = qr.createImgTag(6, 6);
@@ -50,7 +50,7 @@ function showQRCode() {
 
     element.innerHTML = qrCode;
 
-    var size = document.getElementById("lightningTipInvoice").clientWidth + "px";
+    var size = document.getElementById("qrcode").clientWidth + "px";
 
     var qrElement = element.children[0];
 
@@ -70,7 +70,7 @@ function createreverseswap(config) {
             try {
                 var json = JSON.parse(request.responseText);
                 if (request.status === 201) {
-                    console.log ("got invoice" + json.invoice)
+                    return localStorage.setItem('data',json.invoice)
                 } 
                 } catch (exception) {
                     console.error(exception)
@@ -90,6 +90,8 @@ function createreverseswap(config) {
 window.onload = function(){
     (function() {
     createreverseswap(myConfig); 
+    showQRCode();
+
 
     var paywithlightning = document.getElementById('pay');
     var invoice = document.getElementById('invoice');
