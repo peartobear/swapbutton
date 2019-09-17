@@ -50,7 +50,7 @@ function showQRCode() {
 
     element.innerHTML = qrCode;
 
-    var size = document.getElementById("qrcode").clientWidth + "px";
+    var size = "200px";
 
     var qrElement = element.children[0];
 
@@ -70,7 +70,8 @@ function createreverseswap(config) {
             try {
                 var json = JSON.parse(request.responseText);
                 if (request.status === 201) {
-                    return localStorage.setItem('data',json.invoice)
+                    localStorage.setItem('data', json.invoice)
+                    showQRCode();
                 } 
                 } catch (exception) {
                     console.error(exception)
@@ -90,8 +91,6 @@ function createreverseswap(config) {
 window.onload = function(){
     (function() {
     createreverseswap(myConfig); 
-    showQRCode();
-
 
     var paywithlightning = document.getElementById('pay');
     var invoice = document.getElementById('invoice');
