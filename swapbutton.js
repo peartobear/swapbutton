@@ -45,10 +45,12 @@ function createQRCode() {
 
 function showQRCode() {
     var element = document.getElementById("qrcode");
+    var invoiceText = document.getElementById("invoice-text")
 
     createQRCode();
 
     element.innerHTML = qrCode;
+    invoiceText.innerHTML = localStorage.getItem("data");
 
     var size = "200px";
 
