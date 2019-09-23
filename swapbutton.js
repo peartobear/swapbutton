@@ -96,7 +96,7 @@ function createreverseswap(config) {
 
 window.onload = function(){
     (function() {
-    createreverseswap(myConfig); 
+   /* createreverseswap(myConfig); */
 
     var paywithlightning = document.getElementById('pay');
 

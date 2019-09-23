@@ -57,7 +57,7 @@
     border-radius: 5px;
     width: 344px; 
     height: 502px;
-    box-shadow: 0 2px 4px 0 #9B9B9B;
+    box-shadow: 0 2px 4px 0 #3B3B3B;
 
   }
   
@@ -112,4 +112,47 @@
     z-index: 1;
     cursor: pointer;
 
+}
+
+#progressBar {
+    box-sizing: border-box;
+    position: relative;
+    background: #F3F3F3;
+    font-family: HelveticaNeue;
+    font-size: 12px;
+    color: #3B393B;
+    height: 30px;
+    width: 344px;
+    line-height: 30px;
+    padding-left: 5px;
+
+
+}
+
+#progressBar div {
+    box-sizing: border-box;
+    background: #F6ECBF;
+    position: absolute;
+    height: 30px;
+    width: 111px;
+    line-height: 30px;
+    overflow-wrap: break-word;
+    white-space: nowrap;
+    margin-left: -5px;
+    padding-left: 10px;
+
+}
+
+.top-buttons {
+    /* Rectangle 5: */
+    background: #70416D;
+    border-radius: 4px;
+    /* scan: */
+    font-family: HelveticaNeue-Medium;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.modal-body {
+    padding-top: 50px; 
 }
