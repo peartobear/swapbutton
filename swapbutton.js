@@ -10,6 +10,8 @@
 */
 
 var qrCode;
+var modal = document.querySelector(".modal")
+var close = document.querySelector(".close")
 
 
 if (typeof localStorage === "undefined" || localStorage === null) {
@@ -80,9 +82,13 @@ function createreverseswap(config) {
         };
 
         request.open('POST', 'https://testnet.boltz.exchange/api/createreverseswap', true);
-        request.setRequestHeader('Content-Type', 'application/json');
+        request.setRequestHeader('Content-Type', 'application/json');   
         request.send(JSON.stringify(config));
     }
+
+
+// imvoice countdown
+
 
 
 
@@ -93,17 +99,20 @@ window.onload = function(){
     createreverseswap(myConfig); 
 
     var paywithlightning = document.getElementById('pay');
-    var invoice = document.getElementById('invoice');
 
-    // "payWithLightning" button opens the <dialog> modally
+    paywithlightning.addEventListener("click", function() {
+        modal.style.display = "inline-block"
+    })
 
-    paywithlightning.addEventListener('click', function onOpen() {
-        if (typeof invoice.showModal === "function") {
-            invoice.showModal();
-        } else {
-            alert("Update your browser")
+    close.addEventListener("click", function() {
+        modal.style.display = "none"
+    })
+
+    window.onclick = function(e) {
+        if(e.target == modal) {
+            modal.style.display = "none"
         }
-    });
+    }
 
 })();
 

@@ -1,25 +1,57 @@
 <html>
     <head>
-        <script async defer src="swapbutton.js"></script>
-        <script async defer src="https://cdn.rawgit.com/kazuhikoarase/qrcode-generator/886a247e/js/qrcode.js"></script>
+        <link rel="stylesheet" type="text/css" href="swapbutton.css">
+
         
         <title> SwapButton </title>
         <body>
          <script> </script>
          <h2> Accepting Bitcoin Lightning payments the right way has never been cheaper and easier</h2>
-         <dialog id="invoice">
-             <form method="dialog">
-                    <div id="qrcode"></div>                 
-                <menu>
-                    <button value="cancel">Close</button>
-                 </menu>
-                 </form>
-         </dialog>
-         <menu>
-             <button id="pay">Pay with Lightning</button>
-         </menu>
-             </form>
-         </dialog>                
+         <button id="pay"> <p> Pay with Lightning ⚡ </p></button>
+
+         <div class="modal">
+
+            <div class="modal-content">
+                 <div class="modal-header">
+                    <p1> Pay </p1>
+                    <p2> 30152 sats to: </p2>
+                    <span class="close">&times;</span>
+                    <p3> <br /> <br />Verified Jobs Listings, CryptoJobsList </p3>
+                </div>
+                <div class="modal-body">
+                        <div id="progressBar">
+                                <div>bar</div>
+                        </div>
+                   <div class= "top-buttons"></div>
+                    <button class="scan-button"> scan </button>
+                    <button class="copy-button">copy </button>
+                </div> 
+                <div class="body-text">
+                    <p> scan this qr using any lightning wallets on your phone like bluewallet, zap, etc </p>
+                </div>
+
+                <div class="bottom-buttons">
+                    <button class="invoice-button"> invoice </button>
+                    <button class="node-info-button"> node info</button>
+                </div>
+
+                <div class="qrcode"> </div>
+
+                <button class="open-wallet-button"> open in wallet </button>
+
+                <div class="footer">
+                    <p1> Powered by </p1> <p2> swapbutton.com </p2>
+                </div>
+              
+            </div>
+        </div>
+
+          <script async defer src="swapbutton.js"></script>
+          <script async defer src="https://cdn.rawgit.com/kazuhikoarase/qrcode-generator/886a247e/js/qrcode.js"></script>
+
+
         </body>
     </head>
 </html>
+
+<!--- <div class="razorpay-loader" style="margin:-25px 0 0 -25px;height:50px;width:50px;animation:rzp-rot 1s infinite linear;-webkit-animation:rzp-rot 1s infinite linear;border: 1px solid rgba(255, 255, 255, 0.2);border-top-color: rgba(255, 255, 255, 0.7);border-radius: 50%;position:absolute;left:50%;top:50%;" </div> -->
