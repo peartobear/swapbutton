@@ -23,30 +23,26 @@
                 <div id="progressBar">
                     <div>
                         <i class="fa fa-circle-o-notch fa-spin" style="font-size:12px"> </i>
-                        &nbsp; awaiting payment...
+                        &nbsp; awaiting payment... <span style="color:grey">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 4.17 </span>
+                       
                     </div>
 
                 </div>
                 <div class="modal-body">      
-                   <div class= "top-buttons"></div>
-                    <button class="scan-button"> scan </button>
-                    <button class="copy-button">copy </button>
-                </div> 
+                    <button class="button" id="scanBtn" autofocus> scan </button>
+                    <button class="button" id="copyBtn">copy </button>
                 <div class="body-text">
-                    <p> scan this qr using any lightning wallets on your phone like bluewallet, zap, etc </p>
+                     scan this qr using any lightning wallets on your phone like bluewallet, zap, etc 
                 </div>
-
-                <div class="bottom-buttons">
-                    <button class="invoice-button"> invoice </button>
-                    <button class="node-info-button"> node info</button>
-                </div>
+                    <button class=button id="invoice-btn" > invoice </button>
+                    <button class=button id="node-info-btn"> node info</button>
 
                 <div class="qrcode"> </div>
 
-                <button class="open-wallet-button"> open in wallet </button>
+                <button id ="open-wallet-btn"> open in wallet </button>
 
                 <div class="footer">
-                    <p1> Powered by </p1> <p2> swapbutton.com </p2>
+                    Powered by swapbutton.com 
                 </div>
               
             </div>

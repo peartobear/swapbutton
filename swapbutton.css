@@ -143,16 +143,119 @@
 
 }
 
-.top-buttons {
-    /* Rectangle 5: */
-    background: #70416D;
+.button {
+
+    background: #EEEEEE;
     border-radius: 4px;
     /* scan: */
-    font-family: HelveticaNeue-Medium;
+    font-family: "HelveticaNeue-Light";
     font-size: 14px;
-    color: #FFFFFF;
+    color: black;
+    border-color: #E0DFE0;
+    width: 68px;
+    height: 33px;
+    padding: 0px;
+    transition: background-color 0.1s ;
+
+
+}
+
+.body-text  {
+    /* scan this qr using a: */
+    font-family: HelveticaNeue;
+    font-size: 16px;
+    color: #4A4A4A;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+button:hover {
+    background: #70416D;
+    color: #fff;
+    border: none;
+
+}
+
+button:focus {
+    background: #70416D;
+    color: #fff;
+    border: none;
+    outline:0;
+
+
+}
+
+#scanBtn {
+    /* Rectangle 5: */
+    position: absolute;
+    top: 130px;
+    left: 97px;
+}
+
+#copyBtn {
+    position: absolute;
+    top: 130px;
+    left: 179px;
+}
+
+#invoice-btn {
+    position: absolute;
+    top: 228px;
+    left: 97px;
+
+}
+
+#node-info-btn {
+    position: absolute;
+    top: 228px;
+    left: 179px;
+}
+
+#open-wallet-btn {
+    background: #3e396b;
+    border-radius: 4px;
+    font-family: "HelveticaNeue-Light";
+    font-size: 14px;
+    color: whitesmoke;
+    padding: 0px;
+    position: absolute;
+    left: 97px;
+    width: 136px;
+    top: 417px;
+    height: 33px;
+
+    /* Rectangle 5: */
+}
+
+.qrcode  {
+    position: relative;
+    top: 53px;
+    left: 97px;
+    width: 116px;
+    height: 116px;
 }
 
 .modal-body {
-    padding-top: 50px; 
+    padding-top: 20px; 
 }
+
+.footer {
+        /* Rectangle 3: */
+    position: absolute;
+    left: - 344px;
+    width: 344px;
+    top: 472px;
+    background: #170A19;
+    border-radius: 0 0 5px 5px;
+    font-family: HelveticaNeue-Medium;
+    font-size: 12px;
+    color: #FFFFFF;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+}
+
