@@ -12,6 +12,10 @@
 var qrCode;
 var modal = document.querySelector(".modal")
 var close = document.querySelector(".close")
+var paywithlightning = document.getElementById('pay');
+var elem = document.getElementById("bar");
+
+
 
 
 if (typeof localStorage === "undefined" || localStorage === null) {
@@ -90,7 +94,40 @@ function createreverseswap(config) {
 // imvoice countdown
 
 
+function move() {
+    width = 1;
+     window.id = setInterval(frame, 200);
+    function frame() {
+        if (width >= 100) {
+            clearInterval(window.id);
+            elem.style.background = '#FD7373';
+            elem.innerHTML = 'invoice expired';
+            elem.style.color = "#fff"; 
+        } else {
+            width++;
+            elem.style.width = width + '%'
+        }
+    }   
+}
+   
 
+// detect click event in vanilla js 
+
+
+
+
+
+
+  /*  if ((paywithlightning.clicked == true) && (elem.style.background = '#FD7373')) {
+        clearInterval(window.id);
+        elem.style.width = '1%'
+        move();
+    }  else if (paywithlightning.clicked == false) { move() } 
+    else { return false } */
+    
+
+
+    
 
 // creating a dialog
 
@@ -98,22 +135,18 @@ window.onload = function(){
     (function() {
    /* createreverseswap(myConfig); */
 
-    var paywithlightning = document.getElementById('pay');
+   move();
 
-    paywithlightning.addEventListener("click", function() {
+   paywithlightning.addEventListener("click", function() {
         modal.style.display = "inline-block"
+
     })
 
     close.addEventListener("click", function() {
-        modal.style.display = "none"
+        modal.style.display = "none";
     })
 
-    window.onclick = function(e) {
-        if(e.target == modal) {
-            modal.style.display = "none"
-        }
-    }
-
+   
 })();
 
 }
