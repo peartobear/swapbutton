@@ -9,13 +9,17 @@
 
 */
 
+var invoiceExpired = false;
+var expiryInterval;
+
 var qrCode;
 var modal = document.querySelector(".modal")
 var close = document.querySelector(".close")
 var paywithlightning = document.getElementById('pay');
 var elem = document.getElementById("bar");
 
-
+var elemDefault = elem.innerHTML;
+var elemDefaultStyles = elem.style;
 
 
 if (typeof localStorage === "undefined" || localStorage === null) {
@@ -93,14 +97,16 @@ function createreverseswap(config) {
 
 // imvoice countdown
 
-var count = 0;
-
-function move() {
+function startExpiryCountdown() {
     width = 1;
-     window.id = setInterval(frame, 100);
+     expiryInterval = setInterval(frame, 100);
     function frame() {
         if (width >= 100) {
-            clearInterval(window.id);
+            clearInterval(expiryInterval);
+            expiryInterval = undefined;
+
+            invoiceExpired = true;
+
             elem.style.background = '#FD7373';
             elem.innerHTML = 'invoice expired';
             elem.style.color = "#fff"; 
@@ -127,16 +133,21 @@ function move() {
 window.onload = function(){
     (function() {
    /* createreverseswap(myConfig); */
-   move()
-
    paywithlightning.addEventListener("click", function() {
         modal.style.display = "inline-block"
 
+        if (invoiceExpired) {
+            elem.innerHTML = elemDefault;
+            elem.style = elemDefaultStyles;
+        }
+
+        if (expiryInterval === undefined) {
+            startExpiryCountdown();
+        }
     })
 
     close.addEventListener("click", function() {
         modal.style.display = "none";
-
     })
 
    
