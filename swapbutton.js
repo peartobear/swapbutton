@@ -93,10 +93,11 @@ function createreverseswap(config) {
 
 // imvoice countdown
 
+var count = 0;
 
 function move() {
     width = 1;
-     window.id = setInterval(frame, 200);
+     window.id = setInterval(frame, 100);
     function frame() {
         if (width >= 100) {
             clearInterval(window.id);
@@ -109,13 +110,6 @@ function move() {
         }
     }   
 }
-   
-
-// detect click event in vanilla js 
-
-
-
-
 
 
   /*  if ((paywithlightning.clicked == true) && (elem.style.background = '#FD7373')) {
@@ -126,7 +120,6 @@ function move() {
     else { return false } */
     
 
-
     
 
 // creating a dialog
@@ -134,8 +127,7 @@ function move() {
 window.onload = function(){
     (function() {
    /* createreverseswap(myConfig); */
-
-   move();
+   move()
 
    paywithlightning.addEventListener("click", function() {
         modal.style.display = "inline-block"
@@ -144,6 +136,7 @@ window.onload = function(){
 
     close.addEventListener("click", function() {
         modal.style.display = "none";
+
     })
 
    
