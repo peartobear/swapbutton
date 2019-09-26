@@ -99,7 +99,7 @@ function createreverseswap(config) {
 
 function startExpiryCountdown() {
     width = 1;
-     expiryInterval = setInterval(frame, 100);
+     expiryInterval = setInterval(frame, 200);
     function frame() {
         if (width >= 100) {
             clearInterval(expiryInterval);

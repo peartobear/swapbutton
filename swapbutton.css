@@ -66,11 +66,11 @@
     background: #F9F9F9;
     border-radius: 5px 5px 0 0;
     /* Pay 30152 sats to:: */
-    font-family: HelveticaNeue-CondensedBold;
+    font-family: 'Lato', sans-serif;
     font-size: 20px;
     color: #4A4A4A;
     /* close-icon: */
-    font-family: AppleSymbols;
+    font-family: 'Lato', sans-serif;
     font-size: 22px;
     color: #9B9B9B;
     /* Verified Jobs Listin: */
@@ -82,19 +82,21 @@
 }
 
 .modal-content p2 {
-    font-family: HelveticaNeue;
+    font-family: 'Lato', sans-serif;
     font-size: 20px;
     /* Pay 30152 sats to:: */
 
 }
 
 .modal-content p3 {
-    font-family: HelveticaNeue-Medium;
+    font-family: 'Lato', sans-serif;
     font-size: 12px;
 }
 
 .modal-content p1 {
-    font-family: HelveticaNeue-Bold;
+    /* optimise the css to only fetch "p,a,y" in this case and similarity in many other cases */
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
     font-size: 20px;
     
 }
@@ -118,7 +120,7 @@
     box-sizing: border-box; 
     position: relative;
     background: #F3F3F3;
-    font-family: HelveticaNeue;
+    font-family: 'Lato', sans-serif;
     font-size: 12px;
     color: #3B393B;
     height: 30px;
@@ -139,7 +141,7 @@
     overflow-wrap: break-word;
     white-space: nowrap;
     padding-left: 10px; 
-    transition: width 2s;
+    transition: width 3s;
 
 
 }
@@ -149,21 +151,21 @@
     background: #EEEEEE;
     border-radius: 4px;
     /* scan: */
-    font-family: "HelveticaNeue-Light";
+    font-family: 'Lato', sans-serif;
     font-size: 14px;
     color: black;
     border-color: #E0DFE0;
     width: 68px;
     height: 33px;
     padding: 0px;
-    transition: background-color 0.1s ;
+    transition: background-color 0.1s;
 
 
 }
 
 .body-text  {
     /* scan this qr using a: */
-    font-family: HelveticaNeue;
+    font-family: 'Lato', sans-serif;
     font-size: 16px;
     text-align: center;
     color: #7E7B7F;
@@ -195,18 +197,23 @@ button:focus {
     position: absolute;
     top: 130px;
     left: 97px;
+    font-weight: 300;
 }
 
 #copyBtn {
     position: absolute;
     top: 130px;
     left: 179px;
+    font-weight: 300;
+
 }
 
 #invoice-btn {
     position: absolute;
     top: 228px;
     left: 97px;
+    font-weight: 300;
+
 
 }
 
@@ -214,12 +221,14 @@ button:focus {
     position: absolute;
     top: 228px;
     left: 179px;
+    font-weight: 300;
+
 }
 
 #open-wallet-btn {
     background: #3e396b;
     border-radius: 4px;
-    font-family: "HelveticaNeue-Light";
+    font-family: 'Lato', sans-serif;
     font-size: 14px;
     color: whitesmoke;
     padding: 0px;
@@ -252,7 +261,7 @@ button:focus {
     top: 472px;
     background: #170A19;
     border-radius: 0 0 5px 5px;
-    font-family: HelveticaNeue-Medium;
+    font-family: 'Lato', sans-serif;
     font-size: 12px;
     color: #FFFFFF;
     height: 30px;
