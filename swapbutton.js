@@ -28,7 +28,7 @@ var elemDefaultStyles = elem.style;
 
 
 // Generating a random LTC keypair for claiming the reverse swap 
-
+/*
 
 const TestNet = Ltc.networks.testnet;
 let keyPair = Ltc.ECPair.makeRandom({network: TestNet});
@@ -37,7 +37,7 @@ let {address} = Ltc.payments.p2pkh({pubkey : publicKey});
 let privateKey = keyPair.toWIF();
 console.log("Public: " + publicKey + " \nPrivate: " + privateKey + " \Address: " + address);
 
-
+*/
 
 
 if (typeof localStorage === "undefined" || localStorage === null) {
@@ -161,14 +161,6 @@ var value = localStorage.getItem('value);
 
 
 const tx = new Transaction(); */
-
-
-
-
-
-
-
-
 
 
     
