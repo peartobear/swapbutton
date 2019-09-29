@@ -225,6 +225,14 @@ button:focus {
 
 }
 
+.qrcode {
+    position: absolute;
+    left: 97px;
+    top: 275px;
+
+}
+
+
 #open-wallet-btn {
     background: #3e396b;
     border-radius: 4px;
@@ -241,13 +249,6 @@ button:focus {
     /* Rectangle 5: */
 }
 
-.qrcode  {
-    position: relative;
-    top: 53px;
-    left: 97px;
-    width: 116px;
-    height: 116px;
-}
 
 .modal-body {
     padding-top: 20px; 
@@ -269,4 +270,5 @@ button:focus {
     vertical-align: middle;
     line-height: 30px;
 }
+
 
