@@ -3,12 +3,12 @@
         <link rel="stylesheet" type="text/css" href="swapbutton.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
         
         <title> SwapButton </title>
         <body>
          <script> </script>
-         <h2> Accepting Bitcoin Lightning payments the right way has never been cheaper and easier</h2>
+         <h2> Integrate Non-custodial Bitcoin Lightning Payments in just few lines of code  </h2>
+
          <button id="pay"> <p> Pay with Lightning ⚡ </p></button>
 
          <div class="modal">
@@ -29,18 +29,19 @@
                     </div>
 
                 </div>
-                <div class="modal-body">      
-                    <button class="button" id="scanBtn" autofocus> scan </button>
-                    <button class="button" id="copyBtn">copy </button>
+                <div class="modal-body">
+                        <div class="radio-container">
+                        <input type="radio" name="demo" value="one" id="radio-one" class="radio" checked><label for="radio-one">invoice</label>
+                        <input type="radio" name="demo" value="one" id="radio-two" class="radio" checked><label for="radio-two">node info</label>
+                        </div>
+      
                 <div class="body-text">
                      scan this qr using any lightning wallets on your phone like bluewallet, zap, etc 
                 </div>
-                    <button class=button id="invoice-btn" > invoice </button>
-                    <button class=button id="node-info-btn"> node info</button>
 
                 <div class="qrcode"> </div>
 
-                <button id ="open-wallet-btn"> open in wallet </button>
+                <button id ="copy-btn"> copy </button>
 
                 <div class="footer">
                     Powered by swapbutton.com 
