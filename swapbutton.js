@@ -35,7 +35,7 @@ const myConfig =
 {
     pairId: "LTC/BTC",
     orderSide: "buy",
-    invoiceAmount: 10000,
+    invoiceAmount: 3412,
     claimPublicKey: "a9142f7150b969c9c9fb9094a187f8fb41d617a65e20876300670171b1752102e317e5607e757e9c4448fe458876d7e361222d2cbee33ece9e3a7b2e2359be4d68ac"
   }
 
@@ -95,6 +95,18 @@ function createreverseswap(config) {
     }
 
 
+//copying the invoice on clicking the copy button
+
+var copyBtn = document.getElementById("copy-Btn")
+var copyInvoice = localStorage.getItem('data');
+copyBtn.addEventListener("click", function(){
+    copyInvoice.select();
+    copyInvoice.setSelectionRange(0, 99999) //for mobile devices
+    document.execCommand("copy")
+    copyBtn.innerHTML("Copied!")    
+
+})
+
 // imvoice countdown
 
 function startExpiryCountdown() {
@@ -132,7 +144,7 @@ function startExpiryCountdown() {
 
 window.onload = function(){
     (function() {
-   /* createreverseswap(myConfig); */
+   createreverseswap(myConfig); 
    paywithlightning.addEventListener("click", function() {
         modal.style.display = "inline-block"
 

@@ -192,6 +192,7 @@ html { font-family: 'Inter', sans-serif; }
     left: 97px;
     width: 116px;
     height: 116px;
+    z-index: 1000000;
 }
 
 .modal-body {
