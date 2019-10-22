@@ -81,16 +81,21 @@
     };
     
     function claimSwap(json, preimage) {
-
+        var redeemScript = buffer.Buffer.from(json.redeemScript, 'hex');
+        var transaction = bitcoinjs.Transaction.fromHex(json.lockupTransaction)
+        
+        var lockupOutput = boltzCore.detectSwap(redeemScript, transaction)
+        
         var claimTransaction = boltzCore.constructClaimTransaction(
             [{
+                redeemScript,
+
                 vout: 0,
-                txHash: reverseBuffer(buffer.Buffer.from(json.lockupTransactionId, 'hex')),
-                preimage: buffer.Buffer.from(preimage, 'hex'),
-                value: json.onchainAmount,
                 keys: claimKeys,
+                value: lockupOutput.value,
                 type: boltzCore.OutputType.Bech32,
-                redeemScript: buffer.Buffer.from(json.redeemScript, 'hex'),
+                preimage: buffer.Buffer.from(preimage, 'hex'),
+                txHash: reverseBuffer(buffer.Buffer.from(json.lockupTransactionId, 'hex')),
             }],
             // TODO: change hardcoded claim address
             bitcoinjs.address.toOutputScript('tltc1q3cudtecrxh23nhmqlmzu998yh7d5wzg4vtw2kt', boltzCore.Networks.litecoinTestnet),
